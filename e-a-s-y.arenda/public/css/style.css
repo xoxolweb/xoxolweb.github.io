@@ -1,0 +1,84 @@
+
+
+.contain{
+  max-width: 1180px;
+  margin: auto;
+}
+.top_header{
+  width: 100%;
+  background-color: #111;
+  height: 40px;
+}
+.top_header .contain{
+  display: flex;
+  justify-content: flex-end;
+}
+.social{
+  display: flex;
+  justify-content: flex-end;
+}
+.social a{
+  color:#afafaf;
+  font-size: 4px;
+  display: block;
+  width: 40px;
+  border-left: solid 1px #2c2c2c;
+}
+
+.icon-vk,
+.icon-tw, .icon-fb{
+  line-height: 30px;
+}
+.social .icon-reply-all{
+  font-size: 17px;
+}
+.call_back a{
+  display: block;
+  width: 172px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #b5575f;
+  text-align: center;
+  color: #fff;
+  padding-left: 10px;
+  font: normal 18px/38px  "MyriadPro",sans-serif;
+}
+.call_back{
+  position: relative;
+}
+.call_back i{
+  font-size: 6px;
+  position: absolute;
+  color: #fff;
+  top: 8px;
+  left: 8px;
+}
+.bot_header .contain{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+nav, .call_back, .logo{
+  align-self: center;
+}
+nav a{
+    font: normal 14px/17px "MyriadPro",sans-serif;
+    margin-left: 28px;
+    color: #323232;
+    text-transform: uppercase;
+    position: relative;
+}
+nav a::after{
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background-color: #323232;
+  bottom: 0;
+  left: 50%;
+  transition: .3s;
+}
+nav a:hover::after{
+  width: 100%;
+    left: 0;
+}
