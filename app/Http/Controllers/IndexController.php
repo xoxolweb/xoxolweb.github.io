@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App;
+use App\Bid;
 use App\Http\Requests;
 
 
@@ -19,10 +19,9 @@ class IndexController extends Controller
     }
 
     public function category($category){
+        
 
-
-
-        return view('site.category')->with(compact('category'));
+        return view('site.category')->with($category);
     }
 
     public function detail($category,$id){

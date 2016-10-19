@@ -20,15 +20,17 @@ use Illuminate\Support\Facades\Auth;
 
 
 Auth::routes();
-
+//admin
 Route::group(['prefix'=>'admin'],function(){
+    Route::get('/{$id}','AdminController@edit');
+    Route::get('/add','AdminController@add');
     Route::get('/', 'AdminController@index')->name('adminRoute');
-    Route::post('edit={$id}','AdminController@edit');
-    Route::post('/add','AdminController@add');
 });
-
-Route::get('/{category}-{id}','IndexController@detail');
-Route::get('/{category}','IndexController@category');
+//site
+Route::group(['prefix'=>'{category}'],function(){
+    Route::get('/{detail}','IndexController@detail');
+    Route::get('/','IndexController@category');
+});
 
 Route::get('/', 'IndexController@index')->name('main');
 Route::any('/register','IndexController@index');

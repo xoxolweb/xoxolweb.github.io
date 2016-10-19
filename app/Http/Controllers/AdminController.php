@@ -36,9 +36,10 @@ class AdminController extends Controller
 
 
             $bid = new Bid();
-            $bid_to_edit = $bid->find($id);
 
-            return view('admin.edit')->with(compact('bid_to_edit'));
+            dump($bid::all());
+
+
 
     }
     public function add(){
